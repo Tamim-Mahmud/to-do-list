@@ -17,6 +17,8 @@ document.getElementById('task-btn').addEventListener('click',function(){
     `
     document.getElementById('allTask').appendChild(newElement);
 
+    
+    document.getElementById('add-task-field').value='';
     const deleteButton = document.getElementsByClassName('allButtonDelete');
 
     for(const buttons of deleteButton){
