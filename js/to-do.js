@@ -1,8 +1,11 @@
 let count=0
 document.getElementById('task-btn').addEventListener('click',function(){
+    
     const givenInput = document.getElementById('add-task-field').value;
+    
     count+=1;
-    const newElement =  document.createElement('div');
+    if(givenInput != ''){
+        const newElement =  document.createElement('div');
 
     newElement.innerHTML=`
     <section class=" flex justify-between text-xl font-semibold mt-7">
@@ -16,6 +19,7 @@ document.getElementById('task-btn').addEventListener('click',function(){
     </section>
     `
     document.getElementById('allTask').appendChild(newElement);
+    }
 
     
     document.getElementById('add-task-field').value='';
