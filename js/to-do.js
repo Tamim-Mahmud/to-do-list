@@ -3,8 +3,9 @@ document.getElementById('task-btn').addEventListener('click',function(){
     
     const givenInput = document.getElementById('add-task-field').value;
     
-    count+=1;
-    if(givenInput != ''){
+   
+    if(givenInput != ''){ 
+        count+=1;
         const newElement =  document.createElement('div');
 
     newElement.innerHTML=`
@@ -19,6 +20,9 @@ document.getElementById('task-btn').addEventListener('click',function(){
     </section>
     `
     document.getElementById('allTask').appendChild(newElement);
+    }
+    else{
+        alert("Please Enter Something")
     }
 
     
